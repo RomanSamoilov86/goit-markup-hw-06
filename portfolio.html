@@ -220,17 +220,19 @@
     </main>
     <!-- подвал -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-logo">
+      <div class="container container-footer">
+        <div class="footer-social-link">
           <a href="./" class="logo"> <span class="logo-accent">Web</span><span class="footer-span">Studio</span> </a>
           <address>
-            <p class="footer-adress">г. Киев, пр-т Леси Украинки, 26</p>
+            <p class="footer-adress">
+              г. Киев, пр-т Леси Украинки, 26
+              <br />
+            </p>
             <a href="mailto:info@devstudio.com" class="footer-link"> info@devstudio.com </a>
             <br />
             <a href="tel:+380961111111" class="footer-tel">+38 096 111 11 11</a>
           </address>
         </div>
-
         <div class="footer-container">
           <p class="link-footer">Присоединяйтесь</p>
           <ul class="footer-list">
@@ -263,6 +265,16 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="form-modal-footer">
+          <b class="title-modal-footer">Подпишитесь на рассылку</b>
+          <form action="#" class="modal-footer">
+            <input type="mail" name="user-mail" class="input-modal-footer" placeholder="E-mail" required />
+            <button type="submit" class="btn-modal-footer">Подписаться</button>
+            <svg>
+              <use href="./svg/iconsend.svg"></use>
+            </svg>
+          </form>
         </div>
       </div>
     </footer>

@@ -50,6 +50,17 @@ body {
   letter-spacing: 0.03em;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 /* ===================Header================== */
 
 .header .container {
@@ -251,6 +262,10 @@ li.card-item:not(:last-child) {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #188ce8;
 }
 
 /* ================   Studia   =================== */
@@ -738,6 +753,69 @@ address {
   margin-top: 12px;
   margin-bottom: 20px;
 }
+
+.form-modal-footer {
+  /* width: 570px; */
+  height: 86px;
+  width: calc(50% - 15px);
+  margin-right: 0;
+  text-align: left;
+}
+.title-modal-footer {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-bg-color);
+}
+.modal-footer {
+  display: flex;
+}
+.btn-modal-footer {
+  width: 200px;
+  height: 50px;
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-footer .btn-modal-footer {
+  margin-left: 10px;
+}
+.title-modal-footer {
+  display: block;
+  margin-bottom: 20px;
+}
+.input-modal-footer {
+  width: 100%;
+  height: 50px;
+  padding-left: 16px;
+  color: var(--primarycolor);
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 /* =============================== ===================*/
 .item-link:hover,
 .item-link:focus {
@@ -759,7 +837,7 @@ address {
   padding-top: 94px;
 }
 .footer-container {
-  margin-left: 70px;
+  /* margin-left: 70px; */
   text-align: left;
 }
 .our-work:focus,
@@ -806,6 +884,7 @@ address {
   box-sizing: border-box;
   border-radius: 50%;
   cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close-btn::before {
   background: url(../svg/close.svg);
@@ -858,7 +937,7 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
-  transition: border-color 250ms linear;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-input:focus,
@@ -912,23 +991,30 @@ address {
 .modal-form-policy-label::before {
   display: inline-block;
   content: '';
+  margin-right: 7px;
   width: 16px;
-  height: 16px;
-  outline: 1px solid #212121;
-  margin-right: 8px;
-  vertical-align: middle;
+  height: 15px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.policy-link {
+  color: var(--accent-text-color);
 }
 
 .modal-form-policy-check:checked + .modal-form-policy-label::before {
-  background-color: var(--accent-color);
-  border: 4px solid #ffffff;
+  background-color: var(--accent-text-color);
+  /* border: 4px solid #ffffff; */
+  background-image: url(../svg/checkbox.svg);
 }
 
 .modal-form-btn {
-  min-width: 160px;
-  border: 1px solid var(--accent-color);
-  border-radius: 25px;
-  padding: 12px;
+  min-width: 200px;
+  height: 50px;
+  border: 1px solid var(--accent-text-color);
+
+  padding: 10px 55px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.333;
@@ -936,13 +1022,18 @@ address {
   text-transform: uppercase;
   cursor: pointer;
   background-color: transparent;
-  color: #303030;
-  transition: all 250ms linear;
+
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   align-self: center;
+  background: var(--accent-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #ffffff;
 }
 
 .modal-form-btn:hover,
 .modal-form-btn:focus {
   color: #ffffff;
-  background-color: var(--accent-color);
+  background-color: #188ce8;
 }
+/* ================Модалка в Футере=============== */

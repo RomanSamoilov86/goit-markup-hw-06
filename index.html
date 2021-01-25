@@ -309,7 +309,7 @@
     </main>
     <!-- подвал -->
     <footer class="footer">
-      <div class="container">
+      <div class="container container-footer">
         <div class="footer-social-link">
           <a href="./" class="logo"> <span class="logo-accent">Web</span><span class="footer-span">Studio</span> </a>
           <address>
@@ -354,6 +354,16 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="form-modal-footer">
+          <b class="title-modal-footer">Подпишитесь на рассылку</b>
+          <form action="#" class="modal-footer">
+            <input type="mail" name="user-mail" class="input-modal-footer" placeholder="E-mail" required />
+            <button type="submit" class="btn-modal-footer">Подписаться</button>
+            <svg>
+              <use href="./svg/iconsend.svg"></use>
+            </svg>
+          </form>
         </div>
       </div>
     </footer>
@@ -402,7 +412,7 @@
           </label>
           <input id="policy" type="checkbox" value="policy-accept" class="modal-form-policy-check visually-hidden" />
           <label for="policy" class="modal-form-policy-label"
-            >Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+            >Соглашаюсь с рассылкой и принимаю <a href="#" class="policy-link">Условия договора</a>
           </label>
           <button type="submit" class="modal-form-btn">Отправить</button>
         </form>
