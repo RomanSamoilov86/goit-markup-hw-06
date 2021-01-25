@@ -694,6 +694,10 @@ button:focus {
 .footer .container {
   padding: 0px 15px;
 }
+.footer-social-link {
+  width: 270px;
+  margin-right: 30px;
+}
 
 address {
   margin-top: 20px;
@@ -716,7 +720,6 @@ address {
 
 .footer-list {
   display: flex;
-  justify-content: space-between;
 }
 .footer-card:hover .footer-icon,
 .footer-card:focus .footer-icon {
@@ -738,6 +741,8 @@ address {
   /* width: 206px;
   height: 80px; */
   justify-content: left;
+  width: 270px;
+  margin-right: 30px;
 }
 .footer .container {
   display: flex;
